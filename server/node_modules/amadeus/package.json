@@ -1,0 +1,70 @@
+{
+  "name": "amadeus",
+  "version": "8.1.0",
+  "description": "Node library for the Amadeus travel APIs",
+  "main": "lib/amadeus.js",
+  "scripts": {
+    "prebuild": "npm run lint:src & npm run docs",
+    "build": "babel -d lib src/ -s inline",
+    "build:watch": "watch 'npm run build' src",
+    "prepublishOnly": "babel -d lib src/ -s inline",
+    "pretest": "eslint spec",
+    "test": "jest spec --coverage --collectCoverageFrom=src/**/*.js",
+    "test:watch": "watch 'npm test' src spec",
+    "predocs": "npm run lint:docs",
+    "docs": "documentation build src/** -f html -o docs -a undefined -a public",
+    "docs:watch": "watch 'npm run docs' src",
+    "docs:serve": "open docs/",
+    "docs:dev": "npm run docs:serve && npm run docs:watch",
+    "lint:src": "eslint src",
+    "lint:docs": "documentation lint src/**",
+    "console": "node -r ./lib/amadeus.js"
+  },
+  "jest": {
+    "verbose": true,
+    "testEnvironment": "node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amadeus4dev/amadeus-node.git"
+  },
+  "keywords": [
+    "amadeus",
+    "travel",
+    "api",
+    "apis",
+    "hotels",
+    "flights"
+  ],
+  "author": "amadeus-developer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amadeus4dev/amadeus-node/issues"
+  },
+  "homepage": "https://developers.amadeus.com",
+  "contributors": [
+    "cbetta",
+    "Anthony Roux",
+    "Alvaro Navarro",
+    "Akshit Singla",
+    "Anna Tsolakou",
+    "Minji Kim",
+    "Gustavo Giunco Bertoldi"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.18.6",
+    "@babel/core": "^7.18.6",
+    "@babel/preset-env": "^7.18.6",
+    "babel-plugin-add-module-exports": "^1.0.4",
+    "babel-preset-env": "^1.7.0",
+    "documentation": "^13.2.5",
+    "eslint": "^4.16.0",
+    "jest": "^24.8.0",
+    "merge": "^2.1.1",
+    "watch": "^1.0.2"
+  },
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "qs": "^6.11.0"
+  }
+}

@@ -1,0 +1,56 @@
+/* NavBar.css */
+/* Style the custom-navbar */
+.custom-navbar {
+    background-color: #343a40; /* Background color */
+    color: #ffffff; /* Text color */
+    padding: 10px 0; /* Add padding to the top and bottom */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+  }
+  
+  /* Style the brand link */
+  .navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffc107; /* Brand text color */
+  }
+  
+  /* Style the links in the navbar */
+  .navbar-nav .nav-link {
+    margin-right: 20px; /* Spacing between links */
+    font-size: 18px;
+    color: #ffffff; /* Text color */
+    transition: color 0.3s ease-in-out; /* Add hover effect */
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #ffc107; /* Change the color on hover */
+  }
+  /* NavBar.css */
+/* Style the navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  /* Style the brand link */
+  .navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Style the links in the navbar */
+  .navbar-nav .nav-link {
+    margin-right: 10px;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out; /* Add hover effect */
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #ffc107; /* Change the color on hover */
+  }
+  

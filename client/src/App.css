@@ -1,0 +1,96 @@
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.input-container input,
+.input-container select,
+.input-container button {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.flight-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.flight-item {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.flight-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.flight-item div {
+  margin-bottom: 8px;
+}
+
+.flight-item strong {
+  font-weight: bold;
+}
+
+.flight-item .price {
+  color: #e74c3c;
+}
+
+.flight-item .arrival,
+.flight-item .departure {
+  color: #3498db;
+}
+/* Loader container */
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Loader animation */
+.loader {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+/* Animation keyframes */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Text under the loader */
+p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+.tab-btn{
+  background-color: #3498db;
+  padding: 10px;
+  margin: 5px;
+  color: #fff;
+}
