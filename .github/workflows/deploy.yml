@@ -19,7 +19,7 @@ jobs:
           node-version: '18'
 
       - name: Install dependencies
-        run: npm ci --prefix client
+        run: npm install --prefix client
 
       - name: Build React app
         run: npm run build --prefix client
